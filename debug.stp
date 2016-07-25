@@ -1,0 +1,4 @@
+probe kernel.function("recycle_rp_inst").call
+{
+    printf("[%-30s]--------trampoline_handler %d %d---------------------\n",tz_ctime(gettimeofday_s()),pid(),tid());   
+}
